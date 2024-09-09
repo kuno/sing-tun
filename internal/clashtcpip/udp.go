@@ -33,7 +33,7 @@ func (p UDPPacket) SetDestinationPort(port uint16) {
 }
 
 func (p UDPPacket) Payload() []byte {
-	return p[UDPHeaderSize:p.Length()]
+	return p[UDPHeaderSize:]
 }
 
 func (p UDPPacket) Checksum() uint16 {
